@@ -3,3 +3,27 @@
     text-align: center;
     background-color: #99cdd8;
 }
+
+.container #wrapper #change{
+    padding-top:75px;
+    margin-top:75px;
+    border-top:2px dashed black;
+}
+
+.img-presentation{
+    border: 5px solid grey;
+    height:300px;
+}
+
+.container {
+    width: 100%;
+    padding-right: 50px;
+    padding-left: 50px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.titre-blog{
+    width: 200px;
+    padding:10px 0px;
+}
