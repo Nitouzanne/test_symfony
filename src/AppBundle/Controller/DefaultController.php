@@ -11,7 +11,7 @@ use AppBundle\Entity\ExpPro;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/{_locale}", name="homepage")
      */
     public function baseAction(Request $request)
     {
@@ -23,58 +23,58 @@ class DefaultController extends Controller
         ]);
     }
     /**
-     * @Route("/mon-parcours",name="mppage")
+     * @Route("/{_locale}/mon-parcours",name="mppage")
      */
     public function mpAction()
     {
         $birthOf = new \DateTime("05/10/1988");
-        $permis =true;
+        $permis = true;
 
         $adrec = new Formation();
-        $adrec->setTitle("Titre Professionel Niveau III -Développeur Logiciel spécialisé Web");
+        $adrec->setTitle("forma.1.title");
         $adrec->setDateDeb(new \DateTime("09/25/2017"));
         $adrec->setDateFin(new \DateTime("07/10/2018"));
-        $adrec->setDescription("apprentissage des langages: HTML/CSS, C, JAVA,PHP/symfony, JAVASCRIPT ");
-        $adrec->setDiplomeObtenu("Diplome En cours");
+        $adrec->setDescription("forma.1.description");
+        $adrec->setDiplomeObtenu("forma.1.diplomeObt");
 
         $psycho = new Formation();
-        $psycho->setTitle("Maitrise en Psychologie");
+        $psycho->setTitle("forma.2.title");
         $psycho->setDateDeb(new \DateTime("09/19/2008"));
         $psycho->setDateFin(new \DateTime("07/10/2012"));
-        $psycho->setDescription("spécialite psychologie sociale et du travail");
-        $psycho->setDiplomeObtenu("Diplome Obtenu");
+        $psycho->setDescription("forma.2.description");
+        $psycho->setDiplomeObtenu("forma.2.diplomeObt");
 
         $iut = new Formation();
-        $iut->setTitle("1ere année d'iut Réseaux et Télécommunications");
+        $iut->setTitle("forma.3.title");
         $iut->setDateDeb(new \DateTime("09/03/2007"));
         $iut->setDateFin(new \DateTime("06/30/2008"));
-        $iut->setDescription("Informatique : apprentissage de langages du C , bash et base de donénes ET Electronique et Traitement des signaux");
-        $iut->setDiplomeObtenu("Année Complétée");
+        $iut->setDescription("forma.3.description");
+        $iut->setDiplomeObtenu("forma.3.diplomeObt");
 
         $bac = new Formation();
-        $bac->setTitle("BAC S option Sciences de l'ingenieur");
+        $bac->setTitle("forma.4.title");
         $bac->setDateDeb(new \DateTime("09/06/2006"));
         $bac->setDateFin(new \DateTime("07/03/2007"));
-        $bac->setDescription("");
-        $bac->setDiplomeObtenu("Diplome Obtenu");
+        $bac->setDescription("forma.4.description");
+        $bac->setDiplomeObtenu("forma.4.diplomeObt");
 
         $leclerc = new ExpPro();
-        $leclerc->setTitle("Vendeur au Rayon Multimédia");
+        $leclerc->setTitle("expe.1.title");
         $leclerc->setDateDeb(new \DateTime("03/29/2016"));
         $leclerc->setDateFin(new \DateTime("06/10/2017"));
-        $leclerc->setMission("");
+        $leclerc->setMission("expe.1.mission");
 
         $vc = new ExpPro();
-        $vc->setTitle("Co-Gérant de L'entreprise Votre Concierge 63");
+        $vc->setTitle("expe.2.title");
         $vc->setDateDeb(new \DateTime("11/14/2014"));
         $vc->setDateFin(new \DateTime("07/30/2017"));
-        $vc->setMission("");
+        $vc->setMission("expe.2.mission");
 
         $donjon = new ExpPro();
-        $donjon->setTitle("Vendeur(charcuterie) au Donjon du GAEC");
+        $donjon->setTitle("expe.3.title");
         $donjon->setDateDeb(new \DateTime("07/03/2014"));
         $donjon->setDateFin(new \DateTime("10/21/2013"));
-        $donjon->setMission("");
+        $donjon->setMission("expe.3.mission");
 
 
         return $this->render('default\mp.html.twig',[
@@ -84,8 +84,14 @@ class DefaultController extends Controller
             'ExpePro' => [$leclerc,$vc,$donjon]
 
         ]);
+    }
+    /**
+     * @Route("/{_locale}/contact",name="contactpage")
+     */
+    public function contactAction(){
+        return $this->render('default\contact.html.twig',[
 
-
+        ]);
     }
 }
 

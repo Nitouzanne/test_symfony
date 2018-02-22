@@ -8,19 +8,10 @@
                     <img src="{{ asset('assets/images/photoperso.jpg') }}" class="img-presentation">
                 </div>
                 <div class="col-sm-8">
-                    <h3>Nicolas Touzanne</h3>
+                    <h3>{{ 'index.name' | trans }}</h3>
                     <div id="paragraphe" style="width: 500px;">
-                        <p>
-                        Je suis en reconversion professionnelle à l'Adrec Auvergne à Clermont-Ferrand.
-                        Apres avoir acquis un diplôme en Psychologie avec lequel je n'ai pas pas eu l'occasion d'exercer,
-                        je suis passé par de nombreuses activités professionnelles qui m'ont mené à me reformer et m'investir
-                        dans un domaine continuellement en changement.
-                        </p>
-                        <p>
-                        Passionné par les nouvelles technologie depuis mon enfance, je desire
-                        devenir développeur en informatique et apprendre divers langages en plus de ceux sur lesquels je me forme
-                        Mes langages de programmation preferés sont: Le Javascript, Le PHP/Symfony et le Java.
-                        </p>
+                        <p>{{ 'para1.index' | trans }}</p>
+                        <p>{{ 'para2.index' | trans }}</p>
                     </div>
                  </div>
             </div>
@@ -28,7 +19,7 @@
 
         <div id="content">
             <ul>
-                <h3> la liste de mes articles</h3>
+                <h3> {{ 'title.listArticles' | trans }}</h3>
                 <li>...</li>
             </ul>
         </div>

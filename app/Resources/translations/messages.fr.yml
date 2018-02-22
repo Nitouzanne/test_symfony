@@ -1,0 +1,16 @@
+head.base : 'Blog à Moi !'
+title.base : 'Mon Blog'
+first.onglet.base: 'Moi'
+second.onglet.base: 'mon parcours'
+third.onglet.base: 'Mes inpirations'
+fourth.onglet.base: 'Contact'
+
+index.name: 'Nicolas Touzanne'
+title.listArticles: 'Liste des Articles'
+para1.index: 'Je suis en reconversion professionnelle à l''Adrec Auvergne à Clermont-Ferrand.
+Apres avoir acquis un diplôme en Psychologie avec lequel je n''ai pas pas eu l''occasion d''exercer,
+je suis passé par de nombreuses activités professionnelles qui m''ont mené à me reformer et m''investir
+dans un domaine continuellement en changement.'
+para2.index: 'Passionné par les nouvelles technologie depuis mon enfance, je desire devenir développeur
+en informatique et apprendre divers langages en plus de ceux sur lesquels je me forme.
+Mes langages de programmation preferés sont: Le Javascript, Le PHP/Symfony et le Java.'

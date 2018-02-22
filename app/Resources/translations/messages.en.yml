@@ -1,0 +1,16 @@
+head.base: 'This Blog is Mine'
+title.base: 'My Blog'
+first.onglet.base: 'Me'
+second.onglet.base: 'My journey'
+third.onglet.base: 'My Inspirations'
+fourth.onglet.base: 'Contact'
+
+index.name: 'Nicolas Touzanne'
+title.listArticles: 'List of Articles'
+para1.index: 'Actulally in professional reconversion at Adrec Auvergne in Clermont Ferrand.
+After a first degree in Psychology, i have spend a lot of time through many professional activities as my own business
+that has been a very good experience. Every Job helped me to find a new way. A Domain is continually changing '
+para2.index: 'Fascinating about new technologies since my childhood, finally i want to work  as developper
+and to learn some langages.
+My favorites langages of computer programming preferés are: Javascript, PHP/Symfony and  Java.
+With more Time, i would learn: Python and Ruby on Rails.'

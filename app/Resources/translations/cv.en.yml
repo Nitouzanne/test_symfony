@@ -1,0 +1,40 @@
+birth.cv: 'Birth at'
+permis.cv: ' has Driving Licence'
+title.forma.cv : 'My Formations'
+title.formation.cv : 'Name'
+dateDeb.formation.cv: 'Began at'
+dateFin.formation.cv: 'End at'
+Desc.formation.cv: 'Description'
+DiplObt.formation.cv: 'Obtained Degree'
+title.expePro.cv: 'My Professionnal Experiences'
+title.expePross.cv: 'Title'
+dateDeb.expePross.cv: 'Began at'
+dateFin.expePross.cv: 'End At'
+missions.expePross.cv: 'Missions'
+forma:
+  1:
+    title: "Professionnal Degree Level III -Software Developer specialty Web"
+    description: "Learning about: HTML/CSS, C, JAVA,PHP/symfony, JAVASCRIPT "
+    diplomeObt: "In Progress"
+  2:
+    title: "Maitrise in Psychology"
+    description: "Specialty in social and Work Psychology"
+    diplomeObt: "Succeed"
+  3:
+    title: "1st year of iut Network and Telecommunications"
+    description: "Computer Science: learning about: C , bash/shell, database And Electronic and Signal conditionning"
+    diplomeObt: "Complete"
+  4:
+    title: "BAC S option Science of engineering"
+    description: " "
+    diplomeObt: "Succeed"
+expe:
+  1:
+    title: "Seller in Multimedia shelf "
+    mission: " "
+  2:
+    title: "Co-Director of Votre Concierge 63"
+    mission: " "
+  3:
+    title: "Seller in charcuterie for Donjon du GAEC"
+    mission: " "

@@ -1,0 +1,40 @@
+birth.cv: 'né le '
+permis.cv: 'a le permis B'
+title.forma.cv : 'Mes Formations'
+title.formation.cv : 'Titre'
+dateDeb.formation.cv: 'Date de Debut'
+dateFin.formation.cv: 'Date de Fin'
+Desc.formation.cv: 'Description'
+DiplObt.formation.cv: 'Diplome Obtenu'
+title.expePro.cv: 'Mes Experiences Professionnelles'
+title.expePross.cv: 'Titre'
+dateDeb.expePross.cv: 'Date de Debut'
+dateFin.expePross.cv: 'Date de Fin'
+missions.expePross.cv: 'Missions'
+forma:
+  1:
+    title: "Titre Professionel Niveau III -Développeur Logiciel spécialisé Web"
+    description: "apprentissage des langages: HTML/CSS, C, JAVA,PHP/symfony, JAVASCRIPT "
+    diplomeObt: "Diplome En cours"
+  2:
+    title: "Maitrise en Psychologie"
+    description: "spécialite psychologie sociale et du travail"
+    diplomeObt: "Diplome Obtenu"
+  3:
+    title: "1ere année d'iut Réseaux et Télécommunications"
+    description: "Informatique : apprentissage de langages du C , bash et base de donénes ET Electronique et Traitement des signaux"
+    diplomeObt: "Année Complétée"
+  4:
+    title: "BAC S option Sciences de l'ingenieur"
+    description: " "
+    diplomeObt: "Diplome Obtenu"
+expe:
+  1:
+    title: "Vendeur au Rayon Multimédia"
+    mission: " "
+  2:
+    title: "Co-Gérant de L'entreprise Votre Concierge 63"
+    mission: " "
+  3:
+    title: "Vendeur(charcuterie) au Donjon du GAEC"
+    mission: " "

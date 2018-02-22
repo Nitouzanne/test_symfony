@@ -1,54 +1,54 @@
 {% extends 'base.html.twig' %}
-
+{% trans_default_domain 'cv' %}
 {% block body %}
     <div id="wrapper" >
-        <time> né le {{birth|date("d/m/Y")}}</time>
+        <time> {{ 'birth.cv' | trans }} {{birth|date("d/m/Y")}}</time>
         <div>{%   if Permis == 1 %}
-            a le Permis B {% endif %}</div>
+            {{ 'permis.cv' | trans }} {% endif %}</div>
     </div>
     <div class="tableauformations">
-        <h2>Formations</h2>
+        <h2>{{ 'title.forma.cv' | trans }}</h2>
         <table class="table table-bordered table-responsive">
         <thead class="thead-light">
         <tr>
-            <th scope="col">Titre</th>
-            <th scope="col">Date de Début</th>
-            <th scope="col">Date de Fin</th>
-            <th scope="col">Descrption</th>
-            <th scope="col">Diplome Obtenu</th>
+            <th scope="col">{{ 'title.formation.cv' | trans }}</th>
+            <th scope="col">{{ 'dateDeb.formation.cv' | trans }}</th>
+            <th scope="col">{{ 'dateFin.formation.cv' | trans }}</th>
+            <th scope="col">{{ 'Desc.formation.cv' | trans }}</th>
+            <th scope="col">{{ 'DiplObt.formation.cv' | trans }}</th>
         </tr>
         </thead>
             <tbody>
         {% for forma in Formation1 %}
                 <tr>
-                    <th scope="row">{{ forma.title }}</th>
-                    <td>{{ forma.dateDeb|date("d/m/Y") }}</td>
-                    <td>{{ forma.dateFin|date("d/m/Y") }}</td>
-                    <td>{{ forma.description }}</td>
-                    <td>{{ forma.diplomeObtenu }}</td>
+                    <th scope="row">{{ forma.title | trans }}</th>
+                    <td>{{ forma.dateDeb|date("d/m/Y") | trans }}</td>
+                    <td>{{ forma.dateFin|date("d/m/Y") | trans }}</td>
+                    <td>{{ forma.description | trans }}</td>
+                    <td>{{ forma.diplomeObtenu | trans}}</td>
                 </tr>
         {% endfor %}
             </tbody>
         </table>
     </div>
     <div class="tableauExpe">
-        <h2>Expériences Professionelles</h2>
+        <h2>{{ 'title.expePro.cv' | trans }}</h2>
         <table class="table table-bordered table-responsive">
             <thead class="thead-light">
             <tr>
-                <th scope="col">Titre</th>
-                <th scope="col">Date de Début</th>
-                <th scope="col">Date de Fin</th>
-                <th scope="col">Missions</th>
+                <th scope="col">{{ 'title.expePross.cv' | trans }}</th>
+                <th scope="col">{{ 'dateDeb.expePross.cv' | trans }}</th>
+                <th scope="col">{{ 'dateFin.expePross.cv' | trans }}</th>
+                <th scope="col">{{ 'missions.expePross.cv' | trans }}</th>
             </tr>
             </thead>
             <tbody>
             {% for expe in ExpePro %}
                 <tr>
-                    <th scope="row">{{ expe.title }}</th>
-                    <td>{{ expe.dateDeb|date("d/m/Y") }}</td>
-                    <td>{{ expe.dateFin|date("d/m/Y") }}</td>
-                    <td>{{ expe.mission }}</td>
+                    <th scope="row">{{ expe.title | trans }}</th>
+                    <td>{{ expe.dateDeb|date("d/m/Y") |trans }}</td>
+                    <td>{{ expe.dateFin|date("d/m/Y") |trans }}</td>
+                    <td>{{ expe.mission |trans }}</td>
                 </tr>
             {% endfor %}
             </tbody>
