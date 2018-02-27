@@ -11,6 +11,9 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Validator\Constraints\Email;
+use Symfony\Component\Validator\Constraints\Length;
+use Symfony\Component\Validator\Constraints\NotBlank;
 
 class DefaultController extends Controller
 {
@@ -100,16 +103,38 @@ class DefaultController extends Controller
                 'required' =>true,
                 'label' => 'form.Nom',
                 'translation_domain' => 'contact',
+                 'constraints' => [
+                     new NotBlank(),
+                     new Length([
+                         'min' => 2,
+                         'max' => 100,
+                     ]),
+                 ],
             ])
             ->add('firstName',TextType::class,[
                 'required' => true,
                 'label' => 'form.Prenom',
                 'translation_domain' => 'contact',
+                'constraints' => [
+                    new NotBlank(),
+                    new Length([
+                        'min' => 2,
+                        'max' => 100,
+                    ]),
+                ],
             ])
             ->add('mail',EmailType::class,[
                 'required' => true,
                 'label' => 'form.Mail',
                 'translation_domain' => 'contact',
+                'constraints' => [
+                    new NotBlank(),
+                    new Length([
+                        'min' => 2,
+                        'max' => 255,
+                    ]),
+                    new Email(),
+                ],
 
             ])
             ->add('objet',choiceType::class,[
@@ -122,12 +147,22 @@ class DefaultController extends Controller
                 'required' => true,
                 'label' => 'form.objet.label',
                 'translation_domain' => 'contact',
+                'constraints' => [
+                    new NotBlank(),
+                ],
 
             ])
             ->add('Message',TextareaType::class,[
                 'required' => true,
                 'label' => 'form.text',
                 'translation_domain' => 'contact',
+                'constraints' => [
+                    new NotBlank(),
+                    new Length([
+                        'min' => 10,
+                        'max' => 300,
+                    ]),
+                ],
             ]);
 
             $form = $formBuilder->getForm();
