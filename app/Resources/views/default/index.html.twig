@@ -15,16 +15,15 @@
                     </div>
                  </div>
             </div>
-        </div>
-
-        <div id="content">
-            <ul>
-                <h3> {{ 'title.listArticles' | trans }}</h3>
-                <li>...</li>
-            </ul>
+            <div id="content">
+                <ul>
+                    <h3> {{ 'title.listArticles' | trans }}</h3>
+                    <li>...</li>
+                </ul>
+            </div>
         </div>
     </body>
 {% endblock %}
 {% block time %}
-    <time>{{createDate|date("d/m/Y")}}</time>
+    <time class="navbar-brand">{{createDate|date("d/m/Y")}}</time>
 {% endblock %}

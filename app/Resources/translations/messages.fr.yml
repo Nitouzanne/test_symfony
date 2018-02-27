@@ -1,7 +1,6 @@
 head.base : 'Blog à Moi !'
 title.base : 'Mon Blog'
-first.onglet.base: 'Moi'
-second.onglet.base: 'mon parcours'
+second.onglet.base: 'Mon Parcours'
 third.onglet.base: 'Mes inpirations'
 fourth.onglet.base: 'Contact'
 

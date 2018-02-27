@@ -1,0 +1,15 @@
+form:
+  title: "Formulaire de Contact"
+  Nom: "Nom"
+  Prenom: "Prenom"
+  Mail: "E-mail"
+  objet:
+    label: "Objet"
+    contact: "Contact"
+    information: "Information"
+    bug: "Signaler un Bug"
+    priseRV: "Prise d'un Rendez-Vous"
+  text: "Message"
+  submit: "Envoyer"
+
+

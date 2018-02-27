@@ -7,6 +7,10 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use AppBundle\Entity\Formation;
 use AppBundle\Entity\ExpPro;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class DefaultController extends Controller
 {
@@ -88,9 +92,71 @@ class DefaultController extends Controller
     /**
      * @Route("/{_locale}/contact",name="contactpage")
      */
-    public function contactAction(){
-        return $this->render('default\contact.html.twig',[
+    public function contactAction(Request $request,$_locale){
+        $formBuilder = $this->createFormBuilder();
 
+        $formBuilder
+            ->add('lastName',TextType::class,[
+                'required' =>true,
+                'label' => 'form.Nom',
+                'translation_domain' => 'contact',
+            ])
+            ->add('firstName',TextType::class,[
+                'required' => true,
+                'label' => 'form.Prenom',
+                'translation_domain' => 'contact',
+            ])
+            ->add('mail',EmailType::class,[
+                'required' => true,
+                'label' => 'form.Mail',
+                'translation_domain' => 'contact',
+
+            ])
+            ->add('objet',choiceType::class,[
+                'choices'  => array(
+                    'form.objet.contact' => 'contact',
+                    'form.objet.information' => 'information',
+                    'form.objet.bug' => 'bug',
+                    'form.objet.priseRV' => 'priseRV',
+                ),
+                'required' => true,
+                'label' => 'form.objet.label',
+                'translation_domain' => 'contact',
+
+            ])
+            ->add('Message',TextareaType::class,[
+                'required' => true,
+                'label' => 'form.text',
+                'translation_domain' => 'contact',
+            ]);
+
+            $form = $formBuilder->getForm();
+
+        $form ->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()){
+            $data = $form->getData();
+
+            $data['lastName'];
+            $data['firstName'];
+            $data['mail'];
+            $data['objet'];
+            $data['Message'];
+
+            return $this->redirectToRoute('successcontactpage',[
+                '_locale' => $_locale,
+            ]);
+        }
+
+        return $this->render('default\contact.html.twig',[
+            'form' => $form->createView(),
+        ]);
+    }
+    /**
+    * @Route("/{_locale}/successContact",name="successcontactpage")
+    */
+    public function successContact(){
+        return $this->render('default\successcontact.html.twig',[
         ]);
     }
 }

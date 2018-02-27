@@ -1,0 +1,13 @@
+form:
+  title: "Contact Forms"
+  Nom: "LastName"
+  Prenom: "FirstName"
+  Mail: "E-mail"
+  Objet:
+    label: "Subject "
+    contact: "Contact"
+    information: "Information"
+    bug: "Fix a Bug"
+    priseRV: "Take a Date"
+  text: "Message"
+  submit: "Submit"
