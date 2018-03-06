@@ -5,12 +5,13 @@ namespace AppBundle\Controller;
 use AppBundle\Entity\Tags;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Tag controller.
  *
- * @Route("admin")
+ * @Route("/admin/tags")
  */
 class TagsController extends Controller
 {
@@ -39,7 +40,7 @@ class TagsController extends Controller
      */
     public function newAction(Request $request)
     {
-        $tag = new Tag();
+        $tag = new Tags();
         $form = $this->createForm('AppBundle\Form\TagsType', $tag);
         $form->handleRequest($request);
 

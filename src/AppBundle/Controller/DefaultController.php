@@ -18,12 +18,20 @@ use Symfony\Component\Validator\Constraints\NotBlank;
 class DefaultController extends Controller
 {
     /**
+     * @Route("/", name="home")
+     */
+    public function homeAction(Request $request)
+    {
+        return $this->redirectToRoute('homepage',[
+        ]);
+    }
+
+    /**
      * @Route("/{_locale}", name="homepage")
      */
     public function baseAction(Request $request)
     {
         $date = new \DateTime('now') ;
-        // replace this example code with whatever you need
         return $this->render('default\index.html.twig',[
             'createDate' => $date,
 

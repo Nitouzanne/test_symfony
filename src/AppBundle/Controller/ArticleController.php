@@ -5,19 +5,20 @@ namespace AppBundle\Controller;
 use AppBundle\Entity\Article;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Article controller.
  *
- * @Route("admin")
+ * @Route("/admin/article")
  */
 class ArticleController extends Controller
 {
     /**
      * Lists all article entities.
      *
-     * @Route("/", name="admin_index")
+     * @Route("/", name="admin_articleindex")
      * @Method("GET")
      */
     public function indexAction()
@@ -34,7 +35,7 @@ class ArticleController extends Controller
     /**
      * Creates a new article entity.
      *
-     * @Route("/new", name="admin_new")
+     * @Route("/new", name="admin_articlenew")
      * @Method({"GET", "POST"})
      */
     public function newAction(Request $request)
@@ -60,7 +61,7 @@ class ArticleController extends Controller
     /**
      * Finds and displays a article entity.
      *
-     * @Route("/{id}", name="admin_show")
+     * @Route("/{id}", name="admin_articleshow")
      * @Method("GET")
      */
     public function showAction(Article $article)
@@ -76,7 +77,7 @@ class ArticleController extends Controller
     /**
      * Displays a form to edit an existing article entity.
      *
-     * @Route("/{id}/edit", name="admin_edit")
+     * @Route("/{id}/edit", name="admin_articleedit")
      * @Method({"GET", "POST"})
      */
     public function editAction(Request $request, Article $article)
@@ -101,7 +102,7 @@ class ArticleController extends Controller
     /**
      * Deletes a article entity.
      *
-     * @Route("/{id}", name="admin_delete")
+     * @Route("/{id}", name="admin_articledelete")
      * @Method("DELETE")
      */
     public function deleteAction(Request $request, Article $article)
