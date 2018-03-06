@@ -38,7 +38,7 @@ class Article
     /**
      * @var string
      *
-     * @ORM\Column(name="body", type="string", length=255)
+     * @ORM\Column(name="body", type="string", length=255, unique=true)
      */
     private $body;
 

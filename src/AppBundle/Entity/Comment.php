@@ -24,7 +24,7 @@ class Comment
     /**
      * @var string
      *
-     * @ORM\Column(name="nickname", type="string", length=255)
+     * @ORM\Column(name="nickname", type="string", length=255, unique=true)
      */
     private $nickname;
 
