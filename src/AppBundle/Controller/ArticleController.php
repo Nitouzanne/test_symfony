@@ -11,10 +11,18 @@ use Symfony\Component\HttpFoundation\Request;
 /**
  * Article controller.
  *
- * @Route("/admin/article")
+ * @Route("/{_locale}/admin/article")
  */
 class ArticleController extends Controller
 {
+    /**
+     * @Route("/", name="home")
+     */
+    public function articleAction(Request $request)
+    {
+        return $this->redirectToRoute('admin_articleindex',[
+        ]);
+    }
     /**
      * Lists all article entities.
      *
