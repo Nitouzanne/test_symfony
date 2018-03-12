@@ -15,6 +15,11 @@ use Symfony\Component\Validator\Constraints\Email;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
+/**
+ * Class DefaultController
+ * @author Nicolas Touzanne
+ * @package AppBundle\Controller
+ */
 class DefaultController extends Controller
 {
     /**
@@ -31,7 +36,11 @@ class DefaultController extends Controller
      */
     public function baseAction(Request $request)
     {
+        /**
+         * @var \Datetime object. la date d'aujourd'hui
+         */
         $date = new \DateTime('now') ;
+
         return $this->render('default\index.html.twig',[
             'createDate' => $date,
 
@@ -39,10 +48,17 @@ class DefaultController extends Controller
     }
     /**
      * @Route("/{_locale}/mon-parcours",name="mppage")
+     *
      */
     public function mpAction()
     {
+        /**
+         * @var \Datetime $object date de naissance
+         */
         $birthOf = new \DateTime("05/10/1988");
+        /**
+         * @var bool $permis . possession du Permis B
+         */
         $permis = true;
 
         $adrec = new Formation();
@@ -102,10 +118,11 @@ class DefaultController extends Controller
     }
     /**
      * @Route("/{_locale}/contact",name="contactpage")
+     * @param request $request
+     * @return response object
      */
     public function contactAction(Request $request,$_locale){
         $formBuilder = $this->createFormBuilder();
-
         $formBuilder
             ->add('lastName',TextType::class,[
                 'required' =>true,
@@ -197,8 +214,10 @@ class DefaultController extends Controller
     }
     /**
     * @Route("/{_locale}/successContact",name="successcontactpage")
+    * @return $response response
     */
     public function successContact(){
+
         return $this->render('default\successcontact.html.twig',[
         ]);
     }

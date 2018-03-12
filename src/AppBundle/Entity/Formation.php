@@ -1,14 +1,46 @@
 <?php
 namespace AppBundle\Entity;
-
+/**
+ * Class Formation
+ * @author Nicolas Touzanne
+ * @package AppBundle\Entity
+ */
 class Formation
 {
+    /* Titre de la formation
+     *
+     * @var string $title.
+     */
     private $title;
+
+    /* date de debut de la formation
+     *
+     * @var \DateTime object.
+     */
     private $dateDeb;
+
+    /* date de fin de la formation
+     *
+     * @var \DateTime object.
+     */
     private $dateFin;
+
+    /* Description de la formation
+     *
+     * @var string $Description.
+     */
     private $Description;
+
+    /* Resultat de la formation
+     *
+     * @var string $diplomeObtenu.
+     */
     private $diplomeObtenu;
 
+    /** Getter pour $title
+     *
+     * @return string
+     */
     public function getTitle(){
         return $this->title;
     }
