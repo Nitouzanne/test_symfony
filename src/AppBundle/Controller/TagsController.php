@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 /**
  * Tag controller.
  *
- * @Route("/admin/tags")
+ * @Route("/{_locale}/admin/tags")
  */
 class TagsController extends Controller
 {

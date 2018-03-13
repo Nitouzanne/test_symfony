@@ -56,7 +56,7 @@ class Article
     private $comments;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Tag")
+     * @ORM\ManyToMany(targetEntity="Tags")
      * @ORM\JoinTable(name="articles_tags",
      *     joinColumns={@ORM\JoinColumn (name =" article_id ", referencedColumnName ="id")},
      *     inverseJoinColumns ={ @ORM\JoinColumn (name =" tag_id ", referencedColumnName ="id")}
