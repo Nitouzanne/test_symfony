@@ -1,3 +1,7 @@
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
+
+fibo_data:
+  path: /fibonacci
+  controller: AppBundle\Controller\FiboDataController::fibonnacci

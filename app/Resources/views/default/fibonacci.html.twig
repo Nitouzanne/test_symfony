@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <body class="container" style="background-image:url('{{ asset('assets/images/img_0046.jpg') }}')">
+    <div id="wrapper" style="height: 500px;">
+        <h1> la Suite de Fibonacci</h1>
+        <span> Veuillez saisir un chiffre</span>
+        {{ form_start(form) }}
+            {{ form_widget(form) }}
+                <button type="submit" >
+                    {{ 'submit' }}
+                </button>
+        {{ form_end(form) }}
+    </div>
+    </body>
+{% endblock %}

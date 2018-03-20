@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <body class="container" style="background-image:url('{{ asset('assets/images/img_0046.jpg') }}')">
+    <div id="wrapper" style="height: 500px;">
+        <h1> la Suite de Fibonacci</h1>
+        {% for bonacci in Fibo %}
+            <p>{{ bonacci }}</p>
+        {% endfor %}
+    </div>
+    </body>
+{% endblock %}
